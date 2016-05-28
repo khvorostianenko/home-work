@@ -14,17 +14,20 @@
         {
             $min_i = $i;
             $max_i = $i;
+            continue;
         }
-        if ($arr[$i]>0)
+        if ($arr[$i]>$arr[$max_i])
         {
             $max_i = $i;
         }
-        else
+        elseif ($arr[$i]<$arr[$min_i])
         {
             $min_i = $i;
         }
     }
+    echo '<pre>';
     var_dump($arr);
+    echo '<pre>';
     $bufer = $arr[$max_i];
     $arr[$max_i] = $arr[$min_i];
     $arr[$min_i] = $bufer;

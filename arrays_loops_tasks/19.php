@@ -6,8 +6,17 @@
  * Date: 23.05.2016
  * Time: 15:52
  */
-    $arr = array ('понедельник','вторник','среда','четверг','пятница','суббота','воскресенье');
-    $day = 'понедельник';
+    function days($i){
+        $ms = 60*60*24;
+        return gmdate('D', time()+$ms*($i));
+    }
+
+    $arr = array();
+    for ($k=1;$k<=7;$k++){
+        $arr[] = days($k);
+    }
+
+    $day = date('D');
     foreach ($arr as $key){
         if ($key == $day)
         {

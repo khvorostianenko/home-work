@@ -6,7 +6,11 @@
  * Date: 23.05.2016
  * Time: 15:52
  */
-    for ($i=1;$i<=9;$i++)
-        for ($j=1;$j<=9;$j++)
+    $numbers = [1,2,3,4,5,6,7,8,9];
+    foreach ($numbers as $i){
+        foreach ($numbers as $key=>$j){
             echo $i.' * '.$j.' = '.$i*$j.'<br>';
+        }
+    }
+
 ?>
