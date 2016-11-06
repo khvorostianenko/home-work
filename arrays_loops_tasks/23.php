@@ -12,7 +12,7 @@
     $sum_chisel = 0;
     for ($i=1; $i<=$numb_length; $i++)
     {
-        $sum_chisel += $number{$i-1};
+        $sum_chisel += $number[$i-1];
     }
     echo 'Сумма чисел числа '.$numb.' равна '.$sum_chisel;
 ?>
